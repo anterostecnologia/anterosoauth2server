@@ -34,19 +34,22 @@
         <dependent-module archiveName="Anteros-Persistence-Serialization-1.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Serialization/Anteros-Persistence-Serialization">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="Anteros-Persistence-Apt-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Apt/Anteros-Persistence-Apt">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="Anteros-Security-Store-Mongo-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store-Mongo/Anteros-Security-Store-Mongo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-NoSql-Persistence-MongoDB-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence-MongoDB/Anteros-NoSql-Persistence-MongoDB">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Security-SpringV2-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-SpringV2/Anteros-Security-SpringV2">
+        <dependent-module archiveName="Anteros-Generator-Maven-Plugin-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Maven-Plugin/Anteros-Generator-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Generator-Maven-Plugin-1.0.11.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Maven-Plugin/Anteros-Generator-Maven-Plugin">
+        <dependent-module archiveName="Anteros-Generator-Core-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Generator-Core-1.0.17.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
+        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/AnterosArchetype/target/classes"/>
