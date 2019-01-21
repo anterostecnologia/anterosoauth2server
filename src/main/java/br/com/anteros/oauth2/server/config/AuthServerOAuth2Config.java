@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 import br.com.anteros.security.spring.config.AbstractSpringAuthServerOAuth2Configuration;
 
+
 @Configuration
 @EnableAuthorizationServer
 @EnableGlobalMethodSecurity(prePostEnabled = true)

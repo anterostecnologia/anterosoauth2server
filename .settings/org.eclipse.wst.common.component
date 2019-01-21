@@ -22,7 +22,7 @@
         <dependent-module archiveName="Anteros-Persistence-Core-1.0.39.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Core/Anteros-Persistence-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Spring-1.0.11.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Spring/Anteros-Spring">
+        <dependent-module archiveName="Anteros-Spring-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Spring/Anteros-Spring">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Security-Store-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store/Anteros-Security-Store">
@@ -41,6 +41,9 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-NoSql-Persistence-MongoDB-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence-MongoDB/Anteros-NoSql-Persistence-MongoDB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-Security-Spring-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Spring/Anteros-Security-Spring">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Generator-Maven-Plugin-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Maven-Plugin/Anteros-Generator-Maven-Plugin">
