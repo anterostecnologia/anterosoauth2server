@@ -52,7 +52,7 @@
         <dependent-module archiveName="Anteros-Generator-Core-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.4.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
+        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/AnterosArchetype/target/classes"/>

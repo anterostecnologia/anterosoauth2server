@@ -1,7 +1,0 @@
-br/com/anteros/oauth2/server/config/AuthServerOAuth2Config.class
-br/com/anteros/oauth2/server/util/PopulateDatabase.class
-br/com/anteros/oauth2/server/config/SecurityPersistenceConfiguration.class
-br/com/anteros/oauth2/server/config/Encoders.class
-br/com/anteros/oauth2/server/config/ServerMvcConfiguration.class
-br/com/anteros/oauth2/server/config/ServerSecurityConfig.class
-br/com/anteros/oauth2/server/config/ApplicationWebInitializer.class
