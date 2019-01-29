@@ -1,10 +1,12 @@
 package br.com.anteros.oauth2.server.config;
 
+import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 import br.com.anteros.nosql.spring.web.config.AbstractSpringWebAppInitializer;
+import br.com.anteros.nosql.spring.web.config.AnterosCorsFilter;
 
 
 public class ApplicationWebInitializer extends AbstractSpringWebAppInitializer{
@@ -52,8 +54,8 @@ public class ApplicationWebInitializer extends AbstractSpringWebAppInitializer{
 	}
 
 	@Override
-	public void addListener(ServletContext servletContext) {
-		// TODO Auto-generated method stub
+	public void addListener(ServletContext servletContext) {		
+		
 		
 	}
 

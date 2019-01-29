@@ -21,5 +21,8 @@ public class AuthServerOAuth2Config extends AbstractSpringAuthServerOAuth2Config
 	public PasswordEncoder getOAuth2ClientPasswordEncoder() {
 		return oauthClientPasswordEncoder;
 	}
+	
+	
+	
 
 }

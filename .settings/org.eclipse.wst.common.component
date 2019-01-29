@@ -46,10 +46,10 @@
         <dependent-module archiveName="Anteros-Security-Spring-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Spring/Anteros-Security-Spring">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Generator-Maven-Plugin-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Maven-Plugin/Anteros-Generator-Maven-Plugin">
+        <dependent-module archiveName="Anteros-Generator-Maven-Plugin-2.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Maven-Plugin/Anteros-Generator-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Generator-Core-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
+        <dependent-module archiveName="Anteros-Generator-Core-2.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">

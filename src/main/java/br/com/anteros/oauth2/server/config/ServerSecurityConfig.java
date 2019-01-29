@@ -1,5 +1,7 @@
 package br.com.anteros.oauth2.server.config;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,15 +11,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import br.com.anteros.nosql.persistence.session.NoSQLSessionFactory;
-import br.com.anteros.nosql.spring.config.AbstractSpringNoSQLPersistenceConfiguration;
 import br.com.anteros.security.spring.AnterosSecurityManager;
 
 @Configuration
@@ -57,15 +63,26 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(authenticationManager).passwordEncoder(userPasswordEncoder);
 	}
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().anyRequest().permitAll();
-	}
 
 	@Bean(name = "securitySessionFactory")
 	public NoSQLSessionFactory getSecuritySessionFactory(
 			@Autowired @Qualifier("sessionFactoryNoSQL") NoSQLSessionFactory sessionFactoryNoSQL) {
 		return sessionFactoryNoSQL;
 	}
+	
+	@Override
+    protected void configure(HttpSecurity http) throws Exception {
+    	http.cors().and()
+		.csrf().disable().authorizeRequests().anyRequest().permitAll();	    	
+    }
+
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		super.configure(web);
+		web.ignoring()
+        .antMatchers(HttpMethod.OPTIONS);
+	}
+	
+	
 
 }
