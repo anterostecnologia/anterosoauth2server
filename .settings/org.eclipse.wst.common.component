@@ -10,13 +10,16 @@
         <dependent-module archiveName="Anteros-NoSql-Persistence-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence/Anteros-NoSql-Persistence">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="Anteros-NoSql-Spring-Web-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Spring-Web/Anteros-NoSql-Spring-Web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="Anteros-NoSql-Persistence-Serialization-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence-Serialization/Anteros-NoSql-Persistence-Serialization">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Persistence-1.0.13.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence/Anteros-Persistence">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Persistence-Core-1.0.40.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Core/Anteros-Persistence-Core">
+        <dependent-module archiveName="Anteros-Persistence-Core-1.0.41.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Core/Anteros-Persistence-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Spring-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Spring/Anteros-Spring">
@@ -46,7 +49,7 @@
         <dependent-module archiveName="Anteros-Generator-Maven-Plugin-2.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Maven-Plugin/Anteros-Generator-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Generator-Core-2.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
+        <dependent-module archiveName="Anteros-Generator-Core-2.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Generator-Core/Anteros-Generator-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
