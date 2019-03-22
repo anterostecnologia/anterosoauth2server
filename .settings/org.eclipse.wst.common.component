@@ -28,13 +28,19 @@
         <dependent-module archiveName="Anteros-Security-Store-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store/Anteros-Security-Store">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Core-1.1.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Core/Anteros-Core">
+        <dependent-module archiveName="Anteros-Core-1.1.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Core/Anteros-Core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Persistence-Serialization-1.0.7.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Serialization/Anteros-Persistence-Serialization">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Persistence-Apt-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Apt/Anteros-Persistence-Apt">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-Bean-Validation-1.0.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Bean-Validation/Anteros-Bean-Validation">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-EL-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-EL/Anteros-EL">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Security-Store-Mongo-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store-Mongo/Anteros-Security-Store-Mongo">
