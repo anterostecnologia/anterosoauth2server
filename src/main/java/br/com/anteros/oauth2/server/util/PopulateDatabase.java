@@ -19,12 +19,12 @@ public class PopulateDatabase {
 		NoSQLSessionFactory sessionFactory = AnterosNoSQLPersistenceConfiguration
 				.newConfiguration()
 				.addProperty(AnterosNoSQLProperties.DIALECT, "br.com.anteros.nosql.persistence.mongodb.dialect.MongoDialect")
-				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-18-210-226-164.compute-1.amazonaws.com")
+				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "api.versatilcondominio.com.br")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "vps4657.publiccloud.com.br")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_PORT, "27017")
 				.addProperty(AnterosNoSQLProperties.DATABASE_NAME, "anteros_oauth_server")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_USER, "anteros")
-				.addProperty(AnterosNoSQLProperties.CONNECTION_PASSWORD, "ANTEROS727204")
+				.addProperty(AnterosNoSQLProperties.CONNECTION_PASSWORD, "Anteros@a1b2c3d4e5")
 				.packageScanEntity("br.com.anteros.security.store.mongo.domain").includeSecurityModel(true)
 				.withoutTransactionControl(true)
 				.buildSessionFactory();
