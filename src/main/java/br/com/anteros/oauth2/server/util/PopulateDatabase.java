@@ -19,8 +19,9 @@ public class PopulateDatabase {
 		NoSQLSessionFactory sessionFactory = AnterosNoSQLPersistenceConfiguration
 				.newConfiguration()
 				.addProperty(AnterosNoSQLProperties.DIALECT, "br.com.anteros.nosql.persistence.mongodb.dialect.MongoDialect")
-				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "api.versatilcondominio.com.br")
+//				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-34-236-33-109.compute-1.amazonaws.com")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "vps4657.publiccloud.com.br")
+				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "localhost")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_PORT, "27017")
 				.addProperty(AnterosNoSQLProperties.DATABASE_NAME, "anteros_oauth_server")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_USER, "anteros")
@@ -40,8 +41,8 @@ public class PopulateDatabase {
 		String hashedPassword = passwordEncoder.encode(password);
 		
 		client.setClientSecret(hashedPassword);
-		client.setClientDescription("Versátil");
-		client.setClientId("versatilcondominio");
+		client.setClientDescription("Nexus Control");
+		client.setClientId("nexus-control");
 		client.setAuthorizedGrantTypes(new HashSet<String>(Arrays.asList(new String[] {"password",
                         "refresh_token", "implicit", "client_credentials", "authorization_code"})));
 		client.setScope(new HashSet<String>(Arrays.asList(new String[] {"read",
@@ -49,52 +50,52 @@ public class PopulateDatabase {
 		session.save(client);
 		
 		
-		User user = new User();
-		user.setBoAdministrator(true);
-		user.setDescription("Administrador");
-		user.setLogin("admin");
-		user.setPassword("admin1234");
-		user.setName("admin");
-		session.save(user);
-		
-		user = new User();
-		user.setBoAdministrator(true);
-		user.setDescription("Administrador");
-		user.setLogin("AMARILDOCARAPELLI");
-		user.setPassword("ef3iRT");
-		user.setName("AMARILDO CARAPELLI");
-		session.save(user);
-		
-		user = new User();
-		user.setBoAdministrator(true);
-		user.setDescription("Administrador");
-		user.setLogin("IRACILIMA");
-		user.setPassword("aMJi8T");
-		user.setName("IRACI LIMA");
-		session.save(user);
-		
-		user = new User();
-		user.setBoAdministrator(true);
-		user.setDescription("Administrador");
-		user.setLogin("ADERBALPERI");
-		user.setPassword("GAUS4J");
-		user.setName("ADERBAL PERI");
-		session.save(user);
-		
-		user = new User();
-		user.setBoAdministrator(true);
-		user.setDescription("Administrador");
-		user.setLogin("ADAOLUIZ");
-		user.setPassword("8pWAk9");
-		user.setName("ADAO LUIZ");
-		session.save(user);
-		
-		user = new User();
-		user.setBoAdministrator(true);
-		user.setDescription("Administrador");
-		user.setLogin("LUIZFONDAZZI");
-		user.setPassword("N2QmCw");
-		user.setName("LUIZ FONDAZZI");
-		session.save(user);
+//		User user = new User();
+//		user.setBoAdministrator(true);
+//		user.setDescription("Administrador");
+//		user.setLogin("admin");
+//		user.setPassword("admin1234");
+//		user.setName("admin");
+//		session.save(user);
+//		
+//		user = new User();
+//		user.setBoAdministrator(true);
+//		user.setDescription("Administrador");
+//		user.setLogin("AMARILDOCARAPELLI");
+//		user.setPassword("ef3iRT");
+//		user.setName("AMARILDO CARAPELLI");
+//		session.save(user);
+//		
+//		user = new User();
+//		user.setBoAdministrator(true);
+//		user.setDescription("Administrador");
+//		user.setLogin("IRACILIMA");
+//		user.setPassword("aMJi8T");
+//		user.setName("IRACI LIMA");
+//		session.save(user);
+//		
+//		user = new User();
+//		user.setBoAdministrator(true);
+//		user.setDescription("Administrador");
+//		user.setLogin("ADERBALPERI");
+//		user.setPassword("GAUS4J");
+//		user.setName("ADERBAL PERI");
+//		session.save(user);
+//		
+//		user = new User();
+//		user.setBoAdministrator(true);
+//		user.setDescription("Administrador");
+//		user.setLogin("ADAOLUIZ");
+//		user.setPassword("8pWAk9");
+//		user.setName("ADAO LUIZ");
+//		session.save(user);
+//		
+//		user = new User();
+//		user.setBoAdministrator(true);
+//		user.setDescription("Administrador");
+//		user.setLogin("LUIZFONDAZZI");
+//		user.setPassword("N2QmCw");
+//		user.setName("LUIZ FONDAZZI");
+//		session.save(user);
 	}
 }
