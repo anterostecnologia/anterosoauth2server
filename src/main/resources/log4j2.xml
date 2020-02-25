@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration monitorinterval="30" status="info" strict="true">
-    <Appenders>
-        <Appender type="Console" name="Console">
-            <Layout type="PatternLayout" pattern="%d %p [%t] %m%n" />
-        </Appender>
-    </Appenders>
-    <Loggers>
-        <Root level="debug">
-            <AppenderRef ref="File" />
-            <AppenderRef ref="Console" />
-        </Root>
-    </Loggers>
+<Configuration status="WARN" monitorInterval="30">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{dd/MM/YYYY HH:mm:ss.SSS} [Anteros-OAuth2-Server] [%t] [%-5level] %c{1} =>  %msg%n" />
+		</Console>
+		<RollingFile
+			name="RollingFileAppender"
+			fileName="/opt/tomcat/logs/anateros-oauth2-server.log"
+			filePattern="/opt/tomcat/logs/${date:yyyy-MM}/anteros-oauth2-server-%d{dd-MM-yyyy}-%i.log.gz">
+			<PatternLayout
+				pattern="%d{dd/MM/YYYY HH:mm:ss.SSS} [Anteros-OAuth2-Server] [%t] [%-5level] %c{1} =>  %msg%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy interval="1" />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger
+			name="br.com.anteros.persistence.session.context.SQLPersistenceContext"
+			level="WARN" />
+		<Logger name="br.com.anteros.persistence.proxy" level="WARN" />
+		<Logger name="br.com.anteros" level="WARN">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="br.com.versatil" level="WARN">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger
+			name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"
+			level="WARN">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger
+			name="import org.springframework"
+			level="WARN">
+			<AppenderRef ref="Console" />
+		</Logger>
+		
+		<Root level="WARN">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="RollingFileAppender" />
+		</Root>		
+	</Loggers>
 </Configuration>

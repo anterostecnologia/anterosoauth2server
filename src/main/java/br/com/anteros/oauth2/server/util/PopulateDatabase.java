@@ -21,7 +21,7 @@ public class PopulateDatabase {
 				.addProperty(AnterosNoSQLProperties.DIALECT, "br.com.anteros.nosql.persistence.mongodb.dialect.MongoDialect")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-34-236-33-109.compute-1.amazonaws.com")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "vps4657.publiccloud.com.br")
-				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "localhost")
+				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-54-233-133-27.sa-east-1.compute.amazonaws.com")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_PORT, "27017")
 				.addProperty(AnterosNoSQLProperties.DATABASE_NAME, "anteros_oauth_server")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_USER, "anteros")
@@ -41,15 +41,15 @@ public class PopulateDatabase {
 		String hashedPassword = passwordEncoder.encode(password);
 		
 		client.setClientSecret(hashedPassword);
-		client.setClientDescription("Nexus Control");
-		client.setClientId("nexus-control");
+		client.setClientDescription("Versátil ERP");
+		client.setClientId("versatilerp");
 		client.setAuthorizedGrantTypes(new HashSet<String>(Arrays.asList(new String[] {"password",
                         "refresh_token", "implicit", "client_credentials", "authorization_code"})));
 		client.setScope(new HashSet<String>(Arrays.asList(new String[] {"read",
                 "write"})));
 		session.save(client);
 		
-		
+//		
 //		User user = new User();
 //		user.setBoAdministrator(true);
 //		user.setDescription("Administrador");
