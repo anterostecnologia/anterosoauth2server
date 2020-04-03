@@ -19,13 +19,16 @@ public class PopulateDatabase {
 		NoSQLSessionFactory sessionFactory = AnterosNoSQLPersistenceConfiguration
 				.newConfiguration()
 				.addProperty(AnterosNoSQLProperties.DIALECT, "br.com.anteros.nosql.persistence.mongodb.dialect.MongoDialect")
-//				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-34-236-33-109.compute-1.amazonaws.com")
+//				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-54-233-133-27.sa-east-1.compute.amazonaws.com")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "vps4657.publiccloud.com.br")
-				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-54-233-133-27.sa-east-1.compute.amazonaws.com")
+//				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "10.8.0.1")
+				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "10.0.0.190")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_PORT, "27017")
 				.addProperty(AnterosNoSQLProperties.DATABASE_NAME, "anteros_oauth_server")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_USER, "anteros")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_PASSWORD, "Anteros@a1b2c3d4e5")
+//				.addProperty(AnterosNoSQLProperties.CONNECTION_USER, "produtec")
+//				.addProperty(AnterosNoSQLProperties.CONNECTION_PASSWORD, "Prd@sales890035!77oauth2")
 				.packageScanEntity("br.com.anteros.security.store.mongo.domain").includeSecurityModel(true)
 				.withoutTransactionControl(true)
 				.buildSessionFactory();
@@ -41,15 +44,15 @@ public class PopulateDatabase {
 		String hashedPassword = passwordEncoder.encode(password);
 		
 		client.setClientSecret(hashedPassword);
-		client.setClientDescription("Versátil ERP");
-		client.setClientId("versatilerp");
+		client.setClientDescription("Versatil Control");
+		client.setClientId("versatil-control");
 		client.setAuthorizedGrantTypes(new HashSet<String>(Arrays.asList(new String[] {"password",
                         "refresh_token", "implicit", "client_credentials", "authorization_code"})));
 		client.setScope(new HashSet<String>(Arrays.asList(new String[] {"read",
                 "write"})));
 		session.save(client);
 		
-//		
+		
 //		User user = new User();
 //		user.setBoAdministrator(true);
 //		user.setDescription("Administrador");

@@ -9,19 +9,37 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="Anteros-NoSql-Spring-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Spring/Anteros-NoSql-Spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="Anteros-NoSql-Persistence-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence/Anteros-NoSql-Persistence">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Persistence-1.0.22.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterospersistence/anterospersistence">
+        <dependent-module archiveName="Anteros-NoSql-Spring-Web-1.0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Spring-Web/Anteros-NoSql-Spring-Web">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Persistence-Core-1.0.73.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterospersistencecore/anterospersistencecore">
+        <dependent-module archiveName="Anteros-NoSql-Persistence-Serialization-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence-Serialization/Anteros-NoSql-Persistence-Serialization">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Spring-2.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Spring/Anteros-Spring">
+        <dependent-module archiveName="Anteros-Persistence-1.0.23.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterospersistence/anterospersistence">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Core-1.2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anteroscore/anteroscore">
+        <dependent-module archiveName="Anteros-Persistence-Core-1.0.76.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterospersistencecore/anterospersistencecore">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-Cloud-Integration-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Cloud-Integration/Anteros-Cloud-Integration">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-NextCloud-1.0.8.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NextCloud/Anteros-NextCloud">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-Spring-2.0.7.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Spring/Anteros-Spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-Security-Store-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store/Anteros-Security-Store">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Anteros-Core-1.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anteroscore/anteroscore">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Persistence-Serialization-1.0.9.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterospersistenceserialization/anterospersistenceserialization">
@@ -36,6 +54,9 @@
         <dependent-module archiveName="Anteros-EL-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterosel/anterosel">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="Anteros-Security-Store-Mongo-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store-Mongo/Anteros-Security-Store-Mongo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="Anteros-NoSql-Persistence-MongoDB-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence-MongoDB/Anteros-NoSql-Persistence-MongoDB">
             <dependency-type>uses</dependency-type>
         </dependent-module>
@@ -48,10 +69,10 @@
         <dependent-module archiveName="Anteros-Generator-Core-2.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterosgeneratorcore/anterosgeneratorcore">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
+        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.7.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Remote-Synch-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Remote-Synch/Anteros-Remote-Synch">
+        <dependent-module archiveName="Anteros-Remote-Synch-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Remote-Synch/Anteros-Remote-Synch">
             <dependency-type>uses</dependency-type>
         </dependent-module>
                 
