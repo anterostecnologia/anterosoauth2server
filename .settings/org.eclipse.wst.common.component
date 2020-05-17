@@ -36,7 +36,7 @@
         <dependent-module archiveName="Anteros-Spring-2.0.8.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Spring/Anteros-Spring">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Security-Store-1.0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store/Anteros-Security-Store">
+        <dependent-module archiveName="Anteros-Security-Store-1.0.4.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store/Anteros-Security-Store">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-Core-1.2.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anteroscore/anteroscore">
@@ -54,7 +54,7 @@
         <dependent-module archiveName="Anteros-EL-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterosel/anterosel">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Security-Store-Mongo-1.0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store-Mongo/Anteros-Security-Store-Mongo">
+        <dependent-module archiveName="Anteros-Security-Store-Mongo-1.0.4.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Security-Store-Mongo/Anteros-Security-Store-Mongo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Anteros-NoSql-Persistence-MongoDB-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-NoSql-Persistence-MongoDB/Anteros-NoSql-Persistence-MongoDB">
@@ -69,10 +69,10 @@
         <dependent-module archiveName="Anteros-Generator-Core-2.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/anterosgeneratorcore/anterosgeneratorcore">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.8.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
+        <dependent-module archiveName="Anteros-RestDoc-Maven-Plugin-1.0.9.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-RestDoc-Maven-Plugin/Anteros-RestDoc-Maven-Plugin">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Anteros-Remote-Synch-1.0.4.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Remote-Synch/Anteros-Remote-Synch">
+        <dependent-module archiveName="Anteros-Remote-Synch-1.0.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Remote-Synch/Anteros-Remote-Synch">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="br.com.anteros.client.mqttv3-1.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/br.com.anteros.client.mqttv3/br.com.anteros.client.mqttv3">
