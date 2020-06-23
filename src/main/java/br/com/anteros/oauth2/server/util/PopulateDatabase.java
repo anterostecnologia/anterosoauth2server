@@ -22,7 +22,7 @@ public class PopulateDatabase {
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "ec2-54-233-133-27.sa-east-1.compute.amazonaws.com")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "vps4657.publiccloud.com.br")
 //				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "10.8.0.1")
-				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "10.0.0.190")
+				.addProperty(AnterosNoSQLProperties.CONNECTION_HOST, "10.0.223.235")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_PORT, "27017")
 				.addProperty(AnterosNoSQLProperties.DATABASE_NAME, "anteros_oauth_server")
 				.addProperty(AnterosNoSQLProperties.CONNECTION_USER, "anteros")
@@ -43,23 +43,23 @@ public class PopulateDatabase {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String hashedPassword = passwordEncoder.encode(password);
 		
-		client.setClientSecret(hashedPassword);
-		client.setClientDescription("Versatil Control");
-		client.setClientId("versatil-control");
-		client.setAuthorizedGrantTypes(new HashSet<String>(Arrays.asList(new String[] {"password",
-                        "refresh_token", "implicit", "client_credentials", "authorization_code"})));
-		client.setScope(new HashSet<String>(Arrays.asList(new String[] {"read",
-                "write"})));
-		session.save(client);
+//		client.setClientSecret(hashedPassword);
+//		client.setClientDescription("Versatil Parking");
+//		client.setClientId("versatil-parking");
+//		client.setAuthorizedGrantTypes(new HashSet<String>(Arrays.asList(new String[] {"password",
+//                        "refresh_token", "implicit", "client_credentials", "authorization_code"})));
+//		client.setScope(new HashSet<String>(Arrays.asList(new String[] {"read",
+//                "write"})));
+//		session.save(client);
 		
 		
-//		User user = new User();
-//		user.setBoAdministrator(true);
-//		user.setDescription("Administrador");
-//		user.setLogin("admin");
-//		user.setPassword("admin1234");
-//		user.setName("admin");
-//		session.save(user);
+		User user = new User();
+		user.setBoAdministrator(true);
+		user.setDescription("Administrador");
+		user.setLogin("admin");
+		user.setPassword("admin1234");
+		user.setName("admin");
+		session.save(user);
 //		
 //		user = new User();
 //		user.setBoAdministrator(true);
