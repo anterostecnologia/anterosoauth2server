@@ -14,7 +14,7 @@ import br.com.anteros.security.spring.config.AbstractSpringMvcConfiguration;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "br.com.versatil.condominio.server.controller" })
+@ComponentScan(basePackages = { "br.com.anteros.oauth2" })
 public class ServerMvcConfiguration extends AbstractSpringMvcConfiguration {
 
 	@Autowired
