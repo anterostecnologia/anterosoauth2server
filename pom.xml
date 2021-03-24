@@ -58,14 +58,14 @@
 		<!-- ANTEROS -->
 		<dependency>
 			<groupId>br.com.anteros</groupId>
-			<artifactId>Anteros-NoSql-Spring</artifactId>
-			<version>[1.0.0,)</version>
+			<artifactId>Anteros-Security-Spring-SQL</artifactId>
+			<version>[1.0.7,)</version>
 		</dependency>
 
 		<dependency>
 			<groupId>br.com.anteros</groupId>
-			<artifactId>Anteros-NoSql-Spring-Web</artifactId>
-			<version>[1.0.0,)</version>
+			<artifactId>Anteros-Spring-Web</artifactId>
+			<version>[2.0.24,)</version>
 		</dependency>
 
 		<dependency>
@@ -118,7 +118,7 @@
 
 		<dependency>
 			<groupId>br.com.anteros</groupId>
-			<artifactId>Anteros-Security-Store-Mongo</artifactId>
+			<artifactId>Anteros-Security-Store-SQL</artifactId>
 			<version>[1.0.0,)</version>
 		</dependency>
 
@@ -225,12 +225,58 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>br.com.anteros</groupId>
-			<artifactId>Anteros-NoSql-Persistence-MongoDB</artifactId>
-			<version>1.0.6</version>
+			<groupId>org.vibur</groupId>
+			<artifactId>vibur-dbcp</artifactId>
+			<version>25.0</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.5.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client</artifactId>
+			<version>1.30.4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.googlecode.concurrentlinkedhashmap</groupId>
+			<artifactId>concurrentlinkedhashmap-lru</artifactId>
+			<version>1.4.2</version>
+		</dependency>
+
 	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>local-REPO</id>
+			<url>http://vps4657.publiccloud.com.br:8082/artifactory/libs-release-local</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>local-REPO</id>
+			<url>http://vps4657.publiccloud.com.br:8082/artifactory/libs-release-local</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	
 
 	<build>
 

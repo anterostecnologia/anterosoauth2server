@@ -1,12 +1,11 @@
 package br.com.anteros.oauth2.server.config;
 
-import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
-import br.com.anteros.nosql.spring.web.config.AbstractSpringWebAppInitializer;
-import br.com.anteros.nosql.spring.web.config.AnterosCorsFilter;
+import br.com.anteros.spring.web.config.AbstractSpringWebAppInitializer;
+
 
 
 public class ApplicationWebInitializer extends AbstractSpringWebAppInitializer{

@@ -7,7 +7,7 @@
 		</Console>
 		<RollingFile
 			name="RollingFileAppender"
-			fileName="/opt/tomcat/logs/anateros-oauth2-server.log"
+			fileName="/opt/tomcat/logs/anteros-oauth2-server.log"
 			filePattern="/opt/tomcat/logs/${date:yyyy-MM}/anteros-oauth2-server-%d{dd-MM-yyyy}-%i.log.gz">
 			<PatternLayout
 				pattern="%d{dd/MM/YYYY HH:mm:ss.SSS} [Anteros-OAuth2-Server] [%t] [%-5level] %c{1} =>  %msg%n" />

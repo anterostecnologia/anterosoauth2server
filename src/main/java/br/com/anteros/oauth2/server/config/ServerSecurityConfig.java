@@ -18,14 +18,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import br.com.anteros.nosql.persistence.session.NoSQLSessionFactory;
+import br.com.anteros.persistence.session.SQLSessionFactory;
 import br.com.anteros.security.spring.AnterosSecurityManager;
 
 @Configuration
 @EnableWebSecurity
 @Order(Integer.MAX_VALUE - 7)
 @Import({ Encoders.class })
-@ComponentScan({ "br.com.anteros.security.spring", "br.com.anteros.security.store.mongo" })
+@ComponentScan({ "br.com.anteros.security.spring", "br.com.anteros.security.store.sql" })
 @PropertySource("WEB-INF/anterosConfiguration.properties")
 public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -60,10 +60,11 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 	@Bean(name = "securitySessionFactory")
-	public NoSQLSessionFactory getSecuritySessionFactory(
-			@Autowired @Qualifier("sessionFactoryNoSQL") NoSQLSessionFactory sessionFactoryNoSQL) {
-		return sessionFactoryNoSQL;
+	public SQLSessionFactory getSecuritySessionFactory(
+			@Autowired @Qualifier("sessionFactorySQL") SQLSessionFactory sessionFactorySQL) {
+		return sessionFactorySQL;
 	}
+	
 	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
