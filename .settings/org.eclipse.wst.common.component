@@ -9,12 +9,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="Anteros-Persistence-Apt-1.0.8.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Persistence-Apt/Anteros-Persistence-Apt">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="Anteros-Remote-Synch-1.0.12.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Anteros-Remote-Synch/Anteros-Remote-Synch">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
                 
         <property name="java-output-path" value="/AnterosArchetype/target/classes"/>
                 
