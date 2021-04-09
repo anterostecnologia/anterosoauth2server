@@ -2,10 +2,9 @@ package br.com.anteros.oauth2.server.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,8 +25,7 @@ public class SecurityResource {
 	@RequestMapping(value = "/addNewUser", method = { RequestMethod.POST, RequestMethod.PUT })
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
-	public void addNewUser(@RequestParam("description") String description, @RequestParam("login") String login,
-			@RequestParam("password") String password, @RequestParam("name") String name) {
+	public void addNewUser(@RequestBody UserDTO userDTO) {
 
 		SQLSession session = null;
 		try {
@@ -38,19 +36,23 @@ public class SecurityResource {
 
 		try {
 			session.getTransaction().begin();
+			session.setTenantId(userDTO.getOwner());
 			TUser tUser = new TUser("USR");
 			OSQLQuery consultaUser = new OSQLQuery(session);
-			User user = consultaUser.from(tUser).where(tUser.login.equalsIgnoreCase(login)).singleResult(tUser);
+			User user = consultaUser.from(tUser)
+					.where(tUser.login.equalsIgnoreCase(userDTO.getLogin()).and(tUser.owner.eq(userDTO.getOwner())))
+					.singleResult(tUser);
 			if (user != null) {
-				user.setPassword(password);
+				user.setPassword(userDTO.getPassword());
 				session.save(user);
 			} else {
 				user = new User();
+				user.setOwner(userDTO.getOwner());
 				user.setBoAdministrator(true);
-				user.setDescription(description);
-				user.setLogin(login);
-				user.setPassword(password);
-				user.setName(name);
+				user.setDescription(userDTO.getDescription());
+				user.setLogin(userDTO.getLogin());
+				user.setPassword(userDTO.getPassword());
+				user.setName(userDTO.getName());
 				session.save(user);
 			}
 			session.getTransaction().commit();
